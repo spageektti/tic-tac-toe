@@ -1,0 +1,73 @@
+html,
+body,
+main {
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Fira Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-family: "Fira Mono", monospace;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: darkgray;
+}
+
+#resetBtn {
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#resetBtn:hover {
+    background-color: darkgray;
+}
+
+#resetBtn:active {
+    background-color: gray;
+    transform: scale(0.98);
+}
+
+#resetBtn:focus {
+    outline: none;
+    box-shadow: 0 0 5px white;
+}
