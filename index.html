@@ -9,6 +9,10 @@
 <body>
     <main>
         <h1>Tic Tac Toe</h1>
+        <select id="mode">
+            <option value="player">2 Players</option>
+            <option value="easy-ai">Play vs Easy AI</option>
+        </select>
         <div id="game-board">
             <div class="cell" data-cell></div>
             <div class="cell" data-cell></div>
@@ -20,6 +24,7 @@
             <div class="cell" data-cell></div>
             <div class="cell" data-cell></div>
         </div>
+        <p id="statusMessage"></p>
         <button id="resetBtn">Reset Game</button>
     </main>
     <script src="script.js"></script>
