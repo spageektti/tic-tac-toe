@@ -2,8 +2,9 @@ html,
 body,
 main {
     height: 100%;
-    background-color: black;
-    color: white;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color */
+    font-family: "Fira Mono", monospace;
 }
 
 main {
@@ -15,10 +16,10 @@ main {
 
 h1 {
     text-align: center;
-    font-family: "Fira Mono", monospace;
     font-weight: 400;
-    font-style: normal;
     margin-bottom: 20px;
+    color: #00ffff; /* Neon cyan */
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
 }
 
 #game-board {
@@ -34,24 +35,25 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
-    font-family: "Fira Mono", monospace;
-    background-color: white;
-    color: black;
+    font-size: 48px;
+    background-color: #222222; /* Dark gray */
+    color: #ffffff;
     cursor: pointer;
     border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid #00ffff; /* Neon cyan border */
 }
 
 .cell:hover {
-    background-color: darkgray;
+    background-color: #444444; /* Slightly lighter gray */
+    transform: scale(1.05);
 }
 
 #resetBtn {
     margin-top: 20px;
-    color: white;
-    background-color: black;
-    border: solid 1px white;
+    color: #ffffff;
+    background-color: #000000; /* Black */
+    border: solid 1px #ffffff; /* White border */
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
@@ -59,71 +61,93 @@ h1 {
 }
 
 #resetBtn:hover {
-    background-color: darkgray;
+    background-color: #333333; /* Darker gray */
 }
 
 #resetBtn:active {
-    background-color: gray;
+    background-color: #555555; /* Even darker gray */
     transform: scale(0.98);
 }
 
 #resetBtn:focus {
     outline: none;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px #ffffff;
 }
 
 #statusMessage {
     margin-top: 20px;
-    font-size: 18px;
-    font-family: "Fira Mono", monospace;
+    font-size: 24px;
     text-align: center;
+    color: #ffcc00; /* Neon yellow */
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
 }
 
 .win-message {
-    color: #39ff14; /* Neon green */
-    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+    color: #00ff00; /* Neon green */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
 }
 
 .draw-message {
     color: #ff1493; /* Neon pink */
-    text-shadow: 0 0 5px #ff1493, 0 0 10px #ff1493, 0 0 20px #ff1493;
+    text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493;
 }
 
 select {
     margin-bottom: 20px;
-    font-family: "Fira Mono", monospace;
-    color: white;
-    background-color: black;
-    border: solid 1px white;
+    color: #ffffff;
+    background-color: #000000; /* Black */
+    border: solid 1px #ffffff; /* White border */
     border-radius: 5px;
     padding: 10px;
     text-align: center;
-}
-
-select {
     cursor: pointer;
     font-size: 16px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: black;
-    color: white;
-    border: solid 1px white;
-    border-radius: 5px;
-    padding: 10px;
-    transition: background-color 0.3s;
 }
 
 select:hover {
-    background-color: darkgray;
+    background-color: #333333; /* Darker gray */
 }
 
 select:focus {
     outline: none;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px #ffffff;
 }
 
 select option {
-    background-color: black;
-    color: white;
+    background-color: #000000; /* Black */
+    color: #ffffff; /* White text */
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px; /* Responsive max width */
+    margin-bottom: 20px;
+}
+
+#scoreboard div {
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+
+#xWins {
+    background-color: #ff0000; /* Neon red */
+    border: 2px solid #ff0000; /* Neon red border */
+}
+
+#oWins {
+    background-color: #00ff00; /* Neon green */
+    border: 2px solid #00ff00; /* Neon green border */
+}
+
+#draws {
+    background-color: #00ffff; /* Neon cyan */
+    border: 2px solid #00ffff; /* Neon cyan border */
 }
