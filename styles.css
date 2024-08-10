@@ -71,3 +71,59 @@ h1 {
     outline: none;
     box-shadow: 0 0 5px white;
 }
+
+#statusMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: "Fira Mono", monospace;
+    text-align: center;
+}
+
+.win-message {
+    color: #39ff14; /* Neon green */
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+.draw-message {
+    color: #ff1493; /* Neon pink */
+    text-shadow: 0 0 5px #ff1493, 0 0 10px #ff1493, 0 0 20px #ff1493;
+}
+
+select {
+    margin-bottom: 20px;
+    font-family: "Fira Mono", monospace;
+    color: white;
+    background-color: black;
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+select {
+    cursor: pointer;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: black;
+    color: white;
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+select:hover {
+    background-color: darkgray;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 5px white;
+}
+
+select option {
+    background-color: black;
+    color: white;
+}
